@@ -10,7 +10,10 @@ load_dotenv()
 
 
 class SA:
-    st.set_page_config(page_title="Live Twitter Sentiment Analysis",layout="wide",page_icon="favcurt.png")
+    st.set_page_config(
+        page_title="Live Twitter Sentiment Analysis",
+        layout="wide", page_icon="favcurt.png"
+    )
 
     def __init__(self):
         self.api_key = os.environ['API_KEY']
@@ -52,17 +55,42 @@ class SA:
                 for i in tweet_list
             ]
 
+            # fix all html entities in one line like &amp; to & and &gt; to > and so on
+            tweet_list = [
+                re.sub(r'&amp;', '&', i)
+                for i in tweet_list
+            ]
+
+            tweet_list = [
+                re.sub(r'&gt;', '>', i)
+                for i in tweet_list
+            ]
+
+            tweet_list = [
+                re.sub(r'&lt;', '<', i)
+                for i in tweet_list
+            ]
+
+            tweet_list = [
+                re.sub(r'&quot;', '"', i)
+                for i in tweet_list
+            ]
+
             output = [i for i in self.classifier(tweet_list)]
 
             labels = [output[i]['label'] for i in range(len(output))]
 
+            score = [output[i]['score'] for i in range(len(output))]
+
             df = pd.DataFrame(
-                list(zip(tweet_list, labels)),
-                columns=[
-                    'Latest '+str(no_of_tweets) +
-                    ' tweets'+' on '+search_words, 'Sentiment'
-                ]
+                {
+                    'Tweet': tweet_list,
+                    'Sentiment': labels,
+                    'Score': score
+                }
             )
+
+            st.header('Latest Tweets')
 
             st.write(df)
 
