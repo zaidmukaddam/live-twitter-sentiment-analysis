@@ -15,9 +15,9 @@
 > **WEB APPLICATION -** [Live Twitter Sentiment Analysis](https://share.streamlit.io/zaidmukaddam/live-twitter-sentiment-analysis/main/app.py)
 <br>
 
-<img src="https://github.com/zaidmukaddam/live-twitter-sentiment-analysis/blob/main/images/1.png" width=700><br>
-<img src="https://github.com/zaidmukaddam/live-twitter-sentiment-analysis/blob/main/images/2.png" width=600><br>
-<br><img src="https://github.com/zaidmukaddam/live-twitter-sentiment-analysis/blob/main/images/3.png" width=600><br>
+<img src="https://github.com/zaidmukaddam/live-twitter-sentiment-analysis/blob/main/images/1.png"><br><br>
+<img src="https://github.com/zaidmukaddam/live-twitter-sentiment-analysis/blob/main/images/2.png"><br>
+<br><img src="https://github.com/zaidmukaddam/live-twitter-sentiment-analysis/blob/main/images/3.png"><br>
 
 
 ## Run Locally
