@@ -48,7 +48,7 @@ class SA:
             tweet_list = [i.text for i in tweets]
 
             tweet_list = [
-                re.sub(r'(http\S+)|(@\S+)|(#\S+)|(rt\s)', '', i)
+                re.sub(r'(http\S+)|(@\S+)|(#\S+)|(RT\s)', '', i)
                 for i in tweet_list
             ]
 
