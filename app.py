@@ -10,7 +10,7 @@ load_dotenv()
 
 
 class SA:
-    st.set_page_config(layout="wide")
+    st.set_page_config(page_title="Live Twitter Sentiment Analysis",layout="wide",page_icon="favcurt.png")
 
     def __init__(self):
         self.api_key = os.environ['API_KEY']
