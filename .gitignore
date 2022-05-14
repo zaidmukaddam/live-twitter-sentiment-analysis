@@ -2,3 +2,4 @@ demo/
 tweets*
 .env
 main.py
+secrets*
