@@ -2,4 +2,3 @@ demo/
 tweets*
 .env
 main.py
-.streamlit/
