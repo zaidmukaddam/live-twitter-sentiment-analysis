@@ -4,3 +4,14 @@ pandas
 transformers
 tensorflow
 python-dotenv
+ipykernel
+numpy
+pandas
+nb-black
+jinja2
+matplotlib
+gunicorn
+nltk
+wordcloud
+textblob
+plotly
