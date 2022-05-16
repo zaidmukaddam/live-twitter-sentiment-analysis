@@ -5,6 +5,7 @@ import tweepy as tw
 import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
+import nltk
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 from wordcloud import WordCloud
@@ -15,6 +16,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
+nltk.download('all')
 
 extra_stopwords = ["The", "It", "it", "in", "In", "wh"]
 
